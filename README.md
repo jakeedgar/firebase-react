@@ -12,3 +12,11 @@
   * There are no known bugs at this time.  
 ## LICENSE 
 Licensed under the [MIT License](LICENSE).
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
