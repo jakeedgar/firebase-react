@@ -10,6 +10,8 @@ import {
   deleteDoc,
   } from 'firebase/firestore'
 
+const Todo = () => {
+
 
   const [newUserName, setNewUserName] = useState('');
   const [newUserAge, setNewUserAge] = useState(0);
@@ -41,7 +43,6 @@ import {
     getUsers()
   })
 
-const Todo = () => {
   return(
     <div className="App">
       <input 
@@ -57,10 +58,12 @@ const Todo = () => {
       }}
       />
       <button onClick={createUser}>Create User</button>
-      {users.map((user) => {
+      {users.map((user, index) => {
+        // const key = user[index];
       return (
-        <div>
-          {" "}
+        <div
+        key={index}>
+          {/* {" "} */}
           <h1>Name: {user.name}</h1>
           <h1>Age: {user.age}</h1>
           <button onClick={() => {updateUser(user.id, user.age)}}>Increase Age</button>
