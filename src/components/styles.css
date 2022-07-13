@@ -1,0 +1,14 @@
+.my-btn {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 8em;
+  padding: .5rem;
+  border-radius: .15rem;
+}
+
+.my-btn:hover {
+  background-color: beige;
+  cursor: pointer;
+}

@@ -4,8 +4,10 @@ import Home from "./pages/home";
 
 export default function App() {
   return (
-      <div>
-        <Home />
+      <div className="App">
+        <header className="App-header">
+          <Home />
+        </header>
       </div>
   );
 }
