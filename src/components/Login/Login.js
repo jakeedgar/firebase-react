@@ -3,8 +3,11 @@
 const Login = () => {
 
   return(
-    <div>
-      I am the Login
+    <div className="loginPage">
+      Sign in to Continue:
+      <button className="login-with-google">
+        Sign in:
+      </button>
     </div>
   )
 }

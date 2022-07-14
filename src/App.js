@@ -8,6 +8,7 @@ import {
 import HomePage from "./pages/HomePage";
 import CreatePostPage from './pages/CreatePostPage';
 import LoginPage from './pages/LoginPage';
+import TodoPage from './pages/TodoPage/TodoPage';
 
 
 const App = () => {
@@ -16,9 +17,10 @@ const App = () => {
       <Router>
           <nav>
             <ul>
-              <li className="navbar-link"><Link to='/'>Home</Link></li>
-              <li className="navbar-link"><Link to='/createpost'>New Post</Link></li>
-              <li className="navbar-link"><Link to='/login'>Login</Link></li>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/createpost'>New Post</Link></li>
+              <li><Link to='/todo'>Todo List</Link></li>
+              <li><Link to='/login'>Login</Link></li>
             </ul>
           </nav>
           <Routes>
@@ -30,6 +32,9 @@ const App = () => {
             </Route>
             <Route path='/login'
               element={<LoginPage />}>
+            </Route>
+              <Route path='/todo'
+                element={<TodoPage />}>
             </Route>
           </Routes>
         </Router>
