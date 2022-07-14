@@ -1,13 +1,40 @@
 import './App.css';
-import Home from "./pages/home";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CreatePostPage from './pages/CreatePostPage';
+import LoginPage from './pages/LoginPage';
 
 
-export default function App() {
+const App = () => {
   return (
-      <div className="App">
-        <header className="App-header">
-          <Home />
-        </header>
-      </div>
+    <div>
+      <Router>
+          <nav>
+            <ul>
+              <li className="navbar-link"><Link to='/'>Home</Link></li>
+              <li className="navbar-link"><Link to='/createpost'>New Post</Link></li>
+              <li className="navbar-link"><Link to='/login'>Login</Link></li>
+            </ul>
+          </nav>
+          <Routes>
+            <Route path='/'
+              element={<HomePage />}>
+            </Route>
+            <Route path='/createpost'
+              element={<CreatePostPage />}>
+            </Route>
+            <Route path='/login'
+              element={<LoginPage />}>
+            </Route>
+          </Routes>
+        </Router>
+    </div>
   );
 }
+
+export default App;
